@@ -71,11 +71,11 @@ class PcscSimLink(LinkBase):
 		"""see LinkBase.send_apdu_raw"""
 
 		apdu = h2i(pdu)
-		print("apdu >>> ")
+		# print("apdu >>> ")
 		print(''.join(format(apdu, '02x') for apdu in apdu))
 
 		data, sw1, sw2 = self._con.transmit(apdu)
-		print ("response code: " + "sw1: " +str(hex(sw1)) +  " sw2: " + str(hex(sw2)))
+		#print ("response code: " + "sw1: " +str(hex(sw1)) +  " sw2: " + str(hex(sw2)))
 		print (''.join(format(data, '02x') for data in data)) 
 		# print("DATA: ")
 		# print(hex(data))
